@@ -1,0 +1,6 @@
+framework module Pods_FlixApplica {
+  umbrella header "Pods-FlixApplica-umbrella.h"
+
+  export *
+  module * { export * }
+}
