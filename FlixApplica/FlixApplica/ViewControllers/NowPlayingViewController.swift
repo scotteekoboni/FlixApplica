@@ -10,10 +10,12 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
+
     
+
+
     
-    @IBOutlet weak var TableView: UITableView!
-    
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -21,14 +23,16 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     var movies: [[String: Any]] = []
     var refreshControl: UIRefreshControl!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector (NowPlayingViewController.didPullToRefresh(_:)), for: . valueChanged)
-        TableView.insertSubview(refreshControl, at: 0)
+        tableView.insertSubview(refreshControl, at: 0)
         
-        TableView.dataSource = self
+        tableView.dataSource = self
         activityIndicator.startAnimating()
         fetchMovies()
         
@@ -54,7 +58,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
                 self.movies = movies
-                self.TableView.reloadData()
+                self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
                 self.activityIndicator.stopAnimating()
             
@@ -64,7 +68,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return movies.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,11 +87,42 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let baseURLString = "https://image.tmdb.org/t/p/w500"
         
         let posterURL = URL(string: baseURLString + posterPathString)!
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
         cell.posterImageView.af_setImage(withURL: posterURL)
+
         
         return cell 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DetailzViewController
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
+        let movie = movies[indexPath.row]
+        //let title = movie["title"] as! String
+        //let overview = movie["overview"] as! String
+        //cell.titleLabel.text = title
+        //cell.overviewLabel.text = overview
+        
+        let posterPathString = movie["poster_path"] as! String
+        let baseURLString = "https://image.tmdb.org/t/p/w500"
+        tableView.deselectRow(at: indexPath, animated: true)
+        //let posterURL = URL(string: baseURLString + posterPathString)!
+
+        
+        
+        //cell.backPicture.af_setImage(withURL: posterURL)
+        
+        let url = URL(string: baseURLString + posterPathString)!
+        vc.url = url
+        vc.movie = movie
+
+                
+            }
 
     
     
@@ -103,3 +140,5 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
 
 }
+
+
