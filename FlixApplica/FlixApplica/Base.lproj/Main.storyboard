@@ -13,7 +13,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Now Playing View Controller-->
+        <!--FlixApplica-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NowPlayingViewController" customModule="FlixApplica" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Czb-eQ-g1u"/>
+                    <navigationItem key="navigationItem" title="FlixApplica" id="Czb-eQ-g1u"/>
                     <connections>
                         <outlet property="activityIndicator" destination="X4P-K0-zte" id="T3J-RX-URZ"/>
                         <outlet property="tableView" destination="Lbf-mL-tK2" id="JGw-uf-NcB"/>
@@ -108,7 +108,7 @@
             </objects>
             <point key="canvasLocation" x="944.79999999999995" y="105.69715142428787"/>
         </scene>
-        <!--Detailz View Controller-->
+        <!--Details-->
         <scene sceneID="cqY-CK-4NZ">
             <objects>
                 <viewController id="C1s-us-at5" customClass="DetailzViewController" customModule="FlixApplica" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,7 +169,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gyl-Cx-AZN"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TMM-R0-bhp"/>
+                    <navigationItem key="navigationItem" title="Details" id="TMM-R0-bhp"/>
                     <connections>
                         <outlet property="backDropImageView" destination="PjU-Aj-Gd5" id="GnX-FV-lah"/>
                         <outlet property="backPicture" destination="Vn7-qS-cVr" id="E3q-Md-FHD"/>
@@ -201,7 +201,7 @@
             </objects>
             <point key="canvasLocation" x="-380" y="121"/>
         </scene>
-        <!--Super Hero View Controller-->
+        <!--FlixApplica-->
         <scene sceneID="OuD-v5-sGB">
             <objects>
                 <viewController id="TEI-2c-wCz" customClass="SuperHeroViewController" customModule="FlixApplica" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,26 +210,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J0w-xk-v3g">
-                                <rect key="frame" x="-1" y="-1" width="376" height="668"/>
+                                <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YST-Xh-Ydk">
-                                    <size key="itemSize" width="135" height="198"/>
+                                    <size key="itemSize" width="125" height="212"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="PosterCell" id="qgf-9f-8Cn" customClass="PosterCell" customModule="FlixApplica" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="198"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PosterCell" id="qgf-9f-8Cn" customClass="PosterCell" customModule="FlixApplica" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="135" height="198"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="212"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-E3-ibT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="137.5" height="198"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="212"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -243,7 +243,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="7tP-fs-Fie"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xIr-co-L46"/>
+                    <navigationItem key="navigationItem" title="FlixApplica" id="xIr-co-L46"/>
                     <connections>
                         <outlet property="collectionView" destination="J0w-xk-v3g" id="lbl-vI-cWC"/>
                     </connections>
