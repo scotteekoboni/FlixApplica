@@ -15,7 +15,8 @@ class DetailzViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
-    var movie: [String: Any]?
+    //var movie: [String: Any]?
+    var movie: Movie?
     var url: URL?
     
 
@@ -23,13 +24,16 @@ class DetailzViewController: UIViewController {
         super.viewDidLoad()
         
         if let movie = movie {
+            print("here")
+        //titleLabel.text = movie["title"] as? String
+            titleLabel.text = movie.title
+            releaseDateLabel.text = movie.releaseDate
+            //releaseDateLabel.textColor = UIColor.blue
+            overviewLabel.text = movie.overview
             
-        titleLabel.text = movie["title"] as? String
-            releaseDateLabel.text = movie["release_date"] as? String
-            overviewLabel.text = movie["overview"] as? String
-            let backdropPathString = movie["backdrop_path"] as! String
-            let posterPathString = movie["poster_path"] as! String
-            let baseURLString = "https://image.tmdb.org/t/p/w500"
+            let backdropPathString = movie.posterPathString
+            let posterPathString = movie.posterPathString
+            let baseURLString = movie.baseURLString
             
             let backdropURL = URL(string: baseURLString + backdropPathString)!
             backDropImageView.af_setImage(withURL: backdropURL)

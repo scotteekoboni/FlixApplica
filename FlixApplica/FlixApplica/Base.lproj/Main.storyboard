@@ -78,7 +78,7 @@
                                             <outlet property="overviewLabel" destination="bFp-k7-HXb" id="7lR-2c-dY7"/>
                                             <outlet property="posterImageView" destination="XXV-Cd-8an" id="JMb-9r-ptu"/>
                                             <outlet property="titleLabel" destination="xv6-18-6IR" id="rv1-74-Vum"/>
-                                            <segue destination="C1s-us-at5" kind="push" id="r6V-py-gPy"/>
+                                            <segue destination="C1s-us-at5" kind="show" id="r6V-py-gPy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -121,7 +121,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-kE-dhu">
                                 <rect key="frame" x="154" y="293" width="220.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -140,9 +140,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLr-pv-oq6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLr-pv-oq6">
                                 <rect key="frame" x="155" y="331" width="125" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7f9-hX-WBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2306.4000000000001" y="116.49175412293854"/>
+            <point key="canvasLocation" x="1714" y="106"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m4u-eH-0ke">
@@ -269,7 +269,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h7-uR-mZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-379.19999999999999" y="877.9610194902549"/>
+            <point key="canvasLocation" x="-398" y="983"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="2oa-WA-LOm">
